@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello world</title>
+  <!-- Script tags including React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+
+    //to create a React Component use ES6 Class
+    //extending properties and methods from React.Component
+    class App extends React.Component {
+      //any Reac Component as a render() method
+      render() {
+        return <p>Hello from Our App</p> //it returns html (JSX)
+      }
+    }
+
+    //to render it target an existing element on the page
+    const mount = document.querySelector('#app');
+    //Adding the ReactDOM.render() function will render our application on screen
+    ReactDOM.render(<App />, mount);
+  </script>
+</body>
+</html>
